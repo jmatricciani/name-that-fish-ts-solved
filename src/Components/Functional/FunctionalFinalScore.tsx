@@ -1,13 +1,14 @@
+import React from "react";
 import "./styles/final-score.css";
-const correctCount = 0;
-const totalCount = 0;
-export const FunctionalFinalScore = () => (
+import { TypeGameInterface } from "./FunctionalApp";
+
+export const FunctionalFinalScore: React.FC<TypeGameInterface> = (gameData) => (
   <div id="final-score">
     <h1>Your Final Score Was</h1>
     <div id="score">
-      <p>{correctCount}</p>
+      <p>{gameData.correct}</p>
       <hr />
-      <p>{totalCount}</p>
+      <p>{gameData.correct + gameData.incorrect}</p>
     </div>
   </div>
 );
